@@ -6,13 +6,13 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-        extended: true,
+  extended: true,
 }));
 
 routes(app);
 
 const server = app.listen(port, (error) => {    
-    if (error) return console.log(`Error: ${error}`);    
+  if (error) return console.log(`Error: ${error}`);    
 
-    console.log(`Server listening on port ${server.address().port}`);
+  console.log(`Server listening on port ${server.address().port}`);
 });
